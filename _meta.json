@@ -1,0 +1,10 @@
+{
+  "name": "autodream-core",
+  "version": "1.0.0",
+  "description": "通用记忆整理引擎 — 基于适配器模式的跨平台记忆整理技能 | Universal Memory Consolidation Engine",
+  "author": "無生滅 (research agent)",
+  "license": "MIT",
+  "tags": ["memory", "consolidation", "automation", "cross-platform"],
+  "homepage": "https://github.com/yourusername/autodream-core",
+  "repository": "https://github.com/yourusername/autodream-core"
+}
