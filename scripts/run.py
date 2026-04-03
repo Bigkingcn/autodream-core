@@ -111,9 +111,16 @@ def main():
     # 创建引擎 | Create engine
     engine = AutoDreamEngine(
         adapter,
-        max_memory_lines=200,
-        stale_days=30,
-        enable_analytics=True,
+        config={
+            "memory_md_max_lines": 200,
+            "stale_days": 30,
+            "enable_analytics": True,
+            "session_scan_interval_ms": 10 * 60 * 1000,
+            "max_memory_files": 200,
+            "frontmatter_max_lines": 30,
+            "hours_since_last_run": 24,
+            "min_sessions_since_last": 5,
+        },
     )
     
     # 运行整理 | Run consolidation
@@ -123,8 +130,6 @@ def main():
         
         result = engine.run(
             force=args.force,
-            dry_run=args.dry_run,
-            verbose=args.verbose,
         )
         
         # 输出结果 | Output results
